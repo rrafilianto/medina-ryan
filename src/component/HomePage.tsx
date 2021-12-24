@@ -7,7 +7,7 @@ import Time from "./time";
 import Location from "./location";
 import Photo from "./photo";
 import Player from "./player";
-import music from "./../audio/beautiful-in-white.mp3";
+import music from "./../audio/stuck-with-u.mp3";
 
 const HomePage = () => {
   return (
