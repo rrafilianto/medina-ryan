@@ -12,7 +12,7 @@ import music from "./../audio/beautiful-in-white.mp3";
 const HomePage = () => {
   return (
     <div className="text-gray-300">
-      {/* <InvitationModal /> */}
+      <InvitationModal />
       <Player url={music} />
 
       <Header />

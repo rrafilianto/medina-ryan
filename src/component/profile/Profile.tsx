@@ -10,10 +10,10 @@ const Profile = () => {
       </p>
 
       <div className="mt-12 flex justify-around items-center">
-        <LazyLoad>
+        <LazyLoad height={200}>
           <img
             alt="Medina Aulia"
-            src="https://i.im.ge/2021/12/21/oGEEsf.png"
+            src="https://i.im.ge/2021/12/24/XXXzTX.png"
             className="w-28 border-2 rounded-full"
           />
         </LazyLoad>
@@ -38,10 +38,10 @@ const Profile = () => {
           <p>Son of</p>
           <p>Mr. Blablabla and Mrs. Blablabla</p>
         </div>
-        <LazyLoad>
+        <LazyLoad height={200}>
           <img
             alt="Ryan Rafilianto"
-            src="https://i.im.ge/2021/12/21/oGEAB1.png"
+            src="https://i.im.ge/2021/12/24/XXXfR9.png"
             className="w-28 border-2 rounded-full"
           />
         </LazyLoad>

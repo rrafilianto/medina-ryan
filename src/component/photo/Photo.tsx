@@ -3,6 +3,7 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
 import { image } from "./Image";
+import LazyLoad from "react-lazyload";
 
 const Photo = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -24,19 +25,21 @@ const Photo = () => {
         OUR PHOTO
       </p>
 
-      <div className="mt-12">
-        <Gallery photos={image} onClick={openLightBox} />
-        <ModalGateway>
-          {viewerIsOpen && (
-            <Modal onClose={closeLightBox} allowFullscreen={false}>
-              <Carousel
-                views={image.map((img) => ({ source: img.src }))}
-                currentIndex={currentImage}
-              />
-            </Modal>
-          )}
-        </ModalGateway>
-      </div>
+      <LazyLoad height={200}>
+        <div className="mt-12">
+          <Gallery photos={image} onClick={openLightBox} />
+          <ModalGateway>
+            {viewerIsOpen && (
+              <Modal onClose={closeLightBox} allowFullscreen={false}>
+                <Carousel
+                  views={image.map((img) => ({ source: img.src }))}
+                  currentIndex={currentImage}
+                />
+              </Modal>
+            )}
+          </ModalGateway>
+        </div>
+      </LazyLoad>
     </div>
   );
 };
