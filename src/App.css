@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+.page-width {
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #202124;
+}
+
+.color-black {
+  color: #191919;
+  /* color: rgb(25, 25, 25); */
+}
+
+.color-navy {
+  color: #2d4263;
+  /* color: rgb(45, 66, 99); */
+}
+
+.color-red {
+  color: #c84b31;
+  /* color: rgb(200, 75, 49); */
+}
+
+.color-beige {
+  color: #ecdbba;
+  /* color: rgb(236, 219, 186); */
+}
+
+.border-black {
+  border-color: #191919;
+}
+
+.border-navy {
+  border-color: #2d4263;
+}
+
+.border-red {
+  border-color: #c84b31;
+}
+
+.border-beige {
+  border-color: #ecdbba;
+}
+
+.button-red {
+  background-color: rgba(200, 75, 49, 0.8);
+}
+
+.button-red:hover {
+  background-color: rgba(200, 75, 49, 0.9);
+}
