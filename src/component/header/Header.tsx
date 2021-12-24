@@ -20,7 +20,7 @@ const Header = () => {
   });
 
   useEffect(() => {
-    countDown("2022-03-06T14:00:00", setTime);
+    countDown("2022-02-06T14:00:00", setTime);
   }, []);
 
   const handleSaveTheDate = () => {

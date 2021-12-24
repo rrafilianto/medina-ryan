@@ -19,24 +19,34 @@ const Profile = () => {
         </LazyLoad>
         <div className="ml-5">
           <p className="text-lg font-medium">MEDINA AULIA</p>
-          <div className="flex items-center mb-3">
+          <a
+            href="https://www.instagram.com/medinaauliaa"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center mb-3"
+          >
             <InstagramOutlined />
             <p className="font-chasing ml-1">@medinaauliaa</p>
-          </div>
+          </a>
           <p>Daughter of</p>
-          <p>Mr. Blablabla and Mrs. Blablabla</p>
+          <p>Mr. A. Alamsyah Bariji and Mrs. Sri Wahyuni</p>
         </div>
       </div>
 
       <div className="pt-5 flex justify-between items-center mt-3">
         <div className="text-right mr-5">
           <p className="text-lg font-medium">RYAN RAFILIANTO</p>
-          <div className="flex justify-end items-center mb-3">
+          <a
+            href="https://www.instagram.com/rrafilianto"
+            target="_blank"
+            rel="noreferrer"
+            className="flex justify-end items-center mb-3"
+          >
             <InstagramOutlined />
             <p className="font-chasing ml-1">@rrafilianto</p>
-          </div>
+          </a>
           <p>Son of</p>
-          <p>Mr. Blablabla and Mrs. Blablabla</p>
+          <p>Mr. Mukiran and Mrs. Sutati</p>
         </div>
         <LazyLoad height={200}>
           <img
