@@ -13,7 +13,7 @@ const Profile = () => {
         <LazyLoad height={200}>
           <img
             alt="Medina Aulia"
-            src="https://i.im.ge/2021/12/24/XXXzTX.png"
+            src="https://i.ibb.co/mvCg7cv/XXXzTX.png"
             className="w-28 border-2 rounded-full"
           />
         </LazyLoad>
@@ -41,7 +41,7 @@ const Profile = () => {
         <LazyLoad height={200}>
           <img
             alt="Ryan Rafilianto"
-            src="https://i.im.ge/2021/12/24/XXXfR9.png"
+            src="https://i.ibb.co/2tgnqZJ/XXXfR9.png"
             className="w-28 border-2 rounded-full"
           />
         </LazyLoad>
