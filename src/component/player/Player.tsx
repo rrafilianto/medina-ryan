@@ -1,24 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { PlayCircleOutlined, PauseCircleOutlined } from "@ant-design/icons";
 
 interface PlayerProps {
   url: string;
+  isPlay: boolean;
+  handlePlay: () => void;
+  handleStop: () => void;
 }
 
-const Player = ({ url }: PlayerProps) => {
-  const [isPlay, setIsPlay] = useState(true);
-  const audio: any = document?.getElementById?.("audio");
-
-  const handlePlay = () => {
-    audio?.play();
-    setIsPlay(true);
-  };
-
-  const handleStop = () => {
-    audio?.pause();
-    setIsPlay(false);
-  };
-
+const Player = ({ url, isPlay, handlePlay, handleStop }: PlayerProps) => {
   return (
     <>
       <audio id="audio" loop>

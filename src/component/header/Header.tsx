@@ -26,7 +26,7 @@ const Header = () => {
   const handleSaveTheDate = () => {
     const data = {
       text: "Medina and Ryan Wedding - Invitation Wedding",
-      dates: "20211105T150000/20211105T170000",
+      dates: "20220206T180000/20220206T200000",
       details:
         "Thank you for saving our wedding date. We look forward to your presence.",
       location:
