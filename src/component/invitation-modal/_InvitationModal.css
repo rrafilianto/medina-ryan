@@ -1,26 +1,15 @@
-.modal {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
-  left: 50%;
-  transform: translate(-50.1%, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.invitation {
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
 }
 
-/* Modal Content */
-.modal-content {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+.modal-background-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url("https://i.ibb.co/Rv7KDC8/XXXHL8.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: auto;
-  padding: 20px;
-  width: 75%;
+  height: 100vh;
 }

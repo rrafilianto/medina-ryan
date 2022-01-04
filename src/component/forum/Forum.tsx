@@ -4,8 +4,8 @@ import LazyLoad from "react-lazyload";
 const Forum = () => {
   return (
     <div className="px-8 py-14 text-center">
-      <p className="border-b border-red mx-14 pb-4 text-2xl font-medium text-center">
-        Pesan dan Doa
+      <p className="border-b-2 border-green mx-14 pb-4 text-2xl font-medium text-center">
+        WEDDING WISHES
       </p>
 
       <LazyLoad height={200}>

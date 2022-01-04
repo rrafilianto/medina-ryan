@@ -1,5 +1,5 @@
 import React from "react";
-import { PlayCircleOutlined, PauseCircleOutlined } from "@ant-design/icons";
+import { PlayCircle, PauseCircle } from "react-bootstrap-icons";
 
 interface PlayerProps {
   url: string;
@@ -15,14 +15,14 @@ const Player = ({ url, isPlay, handlePlay, handleStop }: PlayerProps) => {
         <source src={url} type="audio/mp3" />
       </audio>
 
-      <div className="fixed bottom-10 left-8">
+      <div className="fixed bottom-10 right-8">
         {isPlay ? (
           <button type="button" onClick={handleStop}>
-            <PauseCircleOutlined className="text-gray-400 text-3xl opacity-70" />
+            <PauseCircle className="color-green text-3xl opacity-80" />
           </button>
         ) : (
           <button type="button" onClick={handlePlay}>
-            <PlayCircleOutlined className="text-gray-400 text-3xl opacity-70" />
+            <PlayCircle className="color-green text-3xl opacity-80" />
           </button>
         )}
       </div>

@@ -7,9 +7,11 @@ import Time from "./time";
 import Location from "./location";
 import Photo from "./photo";
 import Player from "./player";
-import music from "./../audio/stuck-with-u.mp3";
 import Envelope from "./envelope";
 import Forum from "./forum";
+
+import "./_HomePage.css";
+import music from "./../audio/stuck-with-u.mp3";
 
 const HomePage = () => {
   const [isPlay, setIsPlay] = useState<boolean>(false);
@@ -17,6 +19,13 @@ const HomePage = () => {
 
   useEffect(() => {
     setAudio(document?.getElementById?.("audio"));
+
+    const htmlElement = document.querySelector("body");
+    htmlElement?.setAttribute("style", " overflow: hidden");
+
+    setTimeout(() => {
+      window.scrollTo({ top: 0 });
+    }, 1000);
   }, []);
 
   const handlePlay = () => {
@@ -30,7 +39,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="text-gray-300">
+    <div className="text-gray-700">
       <InvitationModal handlePlay={handlePlay} />
 
       <Player
@@ -42,17 +51,19 @@ const HomePage = () => {
 
       <Header />
 
-      <Profile />
+      <div className="bg-fixed home-background-image">
+        <Profile />
 
-      <Time />
+        <Time />
 
-      <Location />
+        <Location />
 
-      <Photo />
+        <Photo />
 
-      <Envelope />
+        <Envelope />
 
-      <Forum />
+        <Forum />
+      </div>
     </div>
   );
 };

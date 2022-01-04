@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LazyLoad from "react-lazyload";
+import { Envelope } from "react-bootstrap-icons";
 import queryString from "query-string";
 
 import "./_InvitationModal.css";
@@ -23,30 +23,43 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
   }, []);
 
   const handleClose = (): void => {
+    window.scrollTo({ top: 0 });
+    const htmlElement = document.querySelector("body");
+    htmlElement?.setAttribute("style", " overflow: scroll");
+
     const modal = document?.getElementById?.("invitation-modal");
-    modal?.setAttribute("style", "display: none");
+    modal?.setAttribute(
+      "style",
+      "visibility: hidden; opacity: 0; transition: visibility 0.2s, opacity 0.2s linear;"
+    );
     handlePlay();
   };
 
   return (
-    <LazyLoad>
-      <div id="invitation-modal" className="modal page-width">
-        <div className="modal-content text-center rounded-lg">
-          <div className="my-5">
-            <p className="text-2xl font-semibold mb-12">Medina & Ryan</p>
-            <p className="mb-3">to Mr/Mrs/Brother/Sister</p>
-            <p className="text-2xl font-semibold capitalize">{name}</p>
-            <p className="mt-7">Invite you to celebrate at our wedding</p>
+    <div
+      id="invitation-modal"
+      className="invitation page-width z-10 text-gray-300"
+    >
+      <div className="modal-background-image">
+        <div className="flex justify-center items-center text-center h-screen">
+          <div>
+            <p className="text-3xl font-semibold mb-20">MEDINA & RYAN</p>
+            <p className="mb-6">to Mr/Mrs/Brother/Sister</p>
+            <p className="text-3xl font-semibold capitalize">{name}</p>
+            <p className="mt-6">Invite you to celebrate at our wedding</p>
             <button
-              className="rounded button-red mt-16 px-6 py-2"
+              className="rounded button-green mt-24 px-6 py-2"
               onClick={handleClose}
             >
-              Open Invitation
+              <div className="flex items-center text-gray-700">
+                <Envelope className="mr-2" />
+                <p>Open Invitation</p>
+              </div>
             </button>
           </div>
         </div>
       </div>
-    </LazyLoad>
+    </div>
   );
 };
 
