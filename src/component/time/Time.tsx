@@ -4,7 +4,7 @@ import { CalendarEvent, Clock } from "react-bootstrap-icons";
 const Time = () => {
   return (
     <div className="px-8 py-14 text-center">
-      <p className="border-b-2 border-green mx-16 pb-4 text-2xl font-medium text-center">
+      <p className="border-b border-black mx-16 pb-4 text-2xl font-medium text-center">
         WEDDING TIME
       </p>
 

@@ -25,7 +25,7 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
   const handleClose = (): void => {
     window.scrollTo({ top: 0 });
     const htmlElement = document.querySelector("body");
-    htmlElement?.setAttribute("style", " overflow: scroll");
+    htmlElement?.setAttribute("style", " overflow-y: scroll");
 
     const modal = document?.getElementById?.("invitation-modal");
     modal?.setAttribute(
@@ -38,7 +38,7 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
   return (
     <div
       id="invitation-modal"
-      className="invitation page-width z-10 text-gray-300"
+      className="invitation page-width z-10 text-gray-100"
     >
       <div className="modal-background-image">
         <div className="flex justify-center items-center text-center h-screen">
@@ -48,10 +48,10 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
             <p className="text-3xl font-semibold capitalize">{name}</p>
             <p className="mt-6">Invite you to celebrate at our wedding</p>
             <button
-              className="rounded button-green mt-24 px-6 py-2"
+              className="rounded button-white mt-24 px-6 py-2"
               onClick={handleClose}
             >
-              <div className="flex items-center text-gray-700">
+              <div className="flex items-center text-gray-800">
                 <Envelope className="mr-2" />
                 <p>Open Invitation</p>
               </div>

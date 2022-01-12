@@ -18,11 +18,11 @@ const Player = ({ url, isPlay, handlePlay, handleStop }: PlayerProps) => {
       <div className="fixed bottom-10 right-8">
         {isPlay ? (
           <button type="button" onClick={handleStop}>
-            <PauseCircle className="color-green text-3xl opacity-80" />
+            <PauseCircle className="text-3xl opacity-40" />
           </button>
         ) : (
           <button type="button" onClick={handlePlay}>
-            <PlayCircle className="color-green text-3xl opacity-80" />
+            <PlayCircle className="text-3xl opacity-40" />
           </button>
         )}
       </div>

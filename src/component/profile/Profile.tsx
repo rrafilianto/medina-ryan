@@ -5,7 +5,7 @@ import { Instagram } from "react-bootstrap-icons";
 const Profile = () => {
   return (
     <div className="px-8 py-14">
-      <p className="border-b-2 border-green mx-28 pb-4 text-2xl font-medium text-center">
+      <p className="border-b border-black mx-28 pb-4 text-2xl font-medium text-center">
         OUR
       </p>
 
@@ -13,8 +13,8 @@ const Profile = () => {
         <LazyLoad height={200}>
           <img
             alt="Medina Aulia"
-            src="https://i.ibb.co/mvCg7cv/XXXzTX.png"
-            className="w-28 border-2 rounded-full border-green"
+            src="https://i.ibb.co/C5NKCqY/bride.png"
+            className="w-28 border-2 rounded-full border-black"
           />
         </LazyLoad>
         <div className="ml-5">
@@ -51,8 +51,8 @@ const Profile = () => {
         <LazyLoad height={200}>
           <img
             alt="Ryan Rafilianto"
-            src="https://i.ibb.co/2tgnqZJ/XXXfR9.png"
-            className="w-28 border-2 rounded-full border-green"
+            src="https://i.ibb.co/3h1Nf8M/groom.png"
+            className="w-28 border-2 rounded-full border-black"
           />
         </LazyLoad>
       </div>

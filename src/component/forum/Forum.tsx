@@ -4,7 +4,7 @@ import LazyLoad from "react-lazyload";
 const Forum = () => {
   return (
     <div className="px-8 py-14 text-center">
-      <p className="border-b-2 border-green mx-14 pb-4 text-2xl font-medium text-center">
+      <p className="border-b border-black mx-14 pb-4 text-2xl font-medium text-center">
         WEDDING WISHES
       </p>
 

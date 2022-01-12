@@ -21,7 +21,7 @@ const HomePage = () => {
     setAudio(document?.getElementById?.("audio"));
 
     const htmlElement = document.querySelector("body");
-    htmlElement?.setAttribute("style", " overflow: hidden");
+    htmlElement?.setAttribute("style", " overflow-y: hidden");
 
     setTimeout(() => {
       window.scrollTo({ top: 0 });
@@ -39,7 +39,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="text-gray-700">
+    <div className="text-gray-800">
       <InvitationModal handlePlay={handlePlay} />
 
       <Player
