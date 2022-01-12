@@ -66,10 +66,10 @@ const Envelope = () => {
 
         <div className="text-center mt-3">
           <button
-            className="rounded button-black px-4 py-1"
+            className="rounded button-black px-4 py-2"
             onClick={() => handleCopyClipboard("dana")}
           >
-            <div className="flex items-center text-gray-100">
+            <div className="flex items-center text-gray-100 text-xs">
               <Clipboard className="mr-2" /> Copy Account Number
             </div>
           </button>
@@ -100,10 +100,10 @@ const Envelope = () => {
 
         <div className="text-center mt-3">
           <button
-            className="rounded button-black px-4 py-1"
+            className="rounded button-black px-4 py-2"
             onClick={() => handleCopyClipboard("bca")}
           >
-            <div className="flex items-center text-gray-100">
+            <div className="flex items-center text-gray-100 text-xs">
               <Clipboard className="mr-2" /> Copy Account Number
             </div>
           </button>
