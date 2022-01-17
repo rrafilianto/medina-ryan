@@ -4,7 +4,7 @@ import { CalendarEvent, Clock } from "react-bootstrap-icons";
 const Time = () => {
   return (
     <div className="px-8 py-14 text-center">
-      <p className="border-b border-black mx-16 pb-4 text-2xl font-medium text-center">
+      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
         WEDDING TIME
       </p>
 
@@ -12,11 +12,11 @@ const Time = () => {
         <p className="text-lg font-medium">AKAD NIKAH</p>
         <div className="flex justify-center items-center mt-3">
           <CalendarEvent className="mr-2" />
-          <p>Sunday, 06 February 2021</p>
+          <p>Sunday, February 06, 2021</p>
         </div>
         <div className="flex justify-center items-center mt-1">
           <Clock className="mr-2" />
-          <p>15.00 WIB - 16.00 WIB</p>
+          <p>14.00 WIB - 16.00 WIB</p>
         </div>
       </div>
 
@@ -24,11 +24,11 @@ const Time = () => {
         <p className="text-lg font-medium">WEDDING CEREMONY</p>
         <div className="flex justify-center items-center mt-3">
           <CalendarEvent className="mr-2" />
-          <p>Sunday, 06 February 2021</p>
+          <p>Sunday, February 06, 2021</p>
         </div>
         <div className="flex justify-center items-center mt-1">
           <Clock className="mr-2" />
-          <p>18.00 WIB - 20.00 WIB</p>
+          <p>18.00 WIB - 21.00 WIB</p>
         </div>
       </div>
     </div>

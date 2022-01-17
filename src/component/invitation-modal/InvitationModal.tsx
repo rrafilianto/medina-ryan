@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Envelope } from "react-bootstrap-icons";
+import { Envelope, MusicNote } from "react-bootstrap-icons";
 import queryString from "query-string";
 
 import "./_InvitationModal.css";
@@ -48,7 +48,7 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
             <p className="text-3xl font-semibold capitalize">{name}</p>
             <p className="mt-6">Invite you to celebrate at our wedding</p>
             <button
-              className="rounded button-white mt-24 px-6 py-2"
+              className="rounded button-white mt-24 px-24 py-3"
               onClick={handleClose}
             >
               <div className="flex items-center text-gray-800">
@@ -56,6 +56,10 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
                 <p>Open Invitation</p>
               </div>
             </button>
+            <div className="flex justify-center items-center mt-10">
+              <MusicNote className="mr-2" />
+              <p>Aiana Grande & Justin Bieber - Stuck with U</p>
+            </div>
           </div>
         </div>
       </div>

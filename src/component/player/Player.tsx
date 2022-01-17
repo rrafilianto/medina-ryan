@@ -15,7 +15,7 @@ const Player = ({ url, isPlay, handlePlay, handleStop }: PlayerProps) => {
         <source src={url} type="audio/mp3" />
       </audio>
 
-      <div className="fixed bottom-10 right-8">
+      <div className="fixed bottom-4 right-4">
         {isPlay ? (
           <button type="button" onClick={handleStop}>
             <PauseCircle className="text-3xl opacity-40" />

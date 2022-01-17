@@ -11,7 +11,7 @@ const Location = () => {
 
   return (
     <div className="px-8 py-14 text-center">
-      <p className="border-b border-black mx-14 pb-4 text-2xl font-medium text-center">
+      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
         WEDDING VENUE
       </p>
 

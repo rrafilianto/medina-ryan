@@ -29,6 +29,7 @@ const Envelope = () => {
     console.log(newData);
 
     form.resetFields();
+    setIsAnon(false);
     message.success("Success Confirmed");
   };
 
@@ -38,8 +39,15 @@ const Envelope = () => {
 
   return (
     <div className="px-8 py-14">
-      <p className="border-b border-black mx-14 pb-4 text-2xl font-medium text-center">
+      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
         ENVELOPE DIGITAL
+      </p>
+
+      <p className="text-center mt-10">
+        Your presence and prayer for our wedding is the greatest gift we could
+        ask for. No other gifts are needed or expected. Nevertheless, we would
+        be honored to receive any gift and have provided the means to make it
+        easier for you. Thank you.
       </p>
 
       <div className="mt-12">
@@ -110,7 +118,7 @@ const Envelope = () => {
         </div>
       </div>
 
-      <div className="rounded mt-14 p-5 bg-white">
+      <div className="border border-gray-300 rounded mt-14 p-5 bg-white bg-opacity-75">
         <p className="text-center text-base mb-3">Transfer Confirmation</p>
         <Form {...layout} form={form} onFinish={handleConfirmation}>
           <Form.Item
@@ -123,7 +131,13 @@ const Envelope = () => {
           >
             <Input placeholder="Input Name" disabled={isAnon} />
           </Form.Item>
-          <Checkbox onChange={onChangeAnonymous}>Show as Anonymous</Checkbox>
+          <Checkbox
+            className="text-xs"
+            checked={isAnon}
+            onChange={onChangeAnonymous}
+          >
+            <p className="text-xs">Show as Anonymous</p>
+          </Checkbox>
           <Form.Item
             name="amount"
             label="Amount"

@@ -26,7 +26,7 @@ const Header = () => {
   const handleSaveTheDate = () => {
     const data = {
       text: "Medina and Ryan Wedding - Invitation Wedding",
-      dates: "20220206T180000/20220206T200000",
+      dates: "20220206T180000/20220206T210000",
       details:
         "Thank you for saving our wedding date. We look forward to your presence.",
       location:
@@ -45,8 +45,7 @@ const Header = () => {
       <div className="flex justify-center items-center text-center h-screen">
         <div>
           <p className="text-3xl font-medium">MEDINA AULIA</p>
-          <p className="text-3xl font-medium mb-1">RYAN RAFILIANTO</p>
-          <p className="mb-10">WE'RE GETTING MARRIED</p>
+          <p className="text-3xl font-medium mb-20">RYAN RAFILIANTO</p>
           <p>Sunday</p>
           <p>February 06, 2022</p>
           <div className="mt-4">
@@ -64,7 +63,7 @@ const Header = () => {
             <div className="border-b border-gray-200 mt-2 mx-8" />
           </div>
           <button
-            className="rounded button-white mt-16 px-6 py-2"
+            className="rounded button-white mt-28 px-6 py-2"
             onClick={handleSaveTheDate}
           >
             <div className="flex items-center text-gray-800">

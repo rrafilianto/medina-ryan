@@ -1,23 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import { Col, Row } from "antd";
 import LazyLoad from "react-lazyload";
+import Carousel, { Modal, ModalGateway } from "react-images";
 import { Instagram } from "react-bootstrap-icons";
 
 const Profile = () => {
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+  const [image, setImage] = useState<any>();
+
+  const handleOpenModalImage = (img: string) => {
+    setImage([{ source: img }]);
+    setModalIsOpen(true);
+  };
+
+  const handleCloseModalImage = () => {
+    setModalIsOpen(false);
+    setImage(null);
+  };
+
   return (
     <div className="px-8 py-14">
-      <p className="border-b border-black mx-28 pb-4 text-2xl font-medium text-center">
-        OUR
+      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
+        WE'RE GETTING MARRIED
       </p>
 
-      <div className="mt-12 flex justify-center items-center">
-        <LazyLoad height={200}>
-          <img
-            alt="Medina Aulia"
-            src="https://i.ibb.co/C5NKCqY/bride.png"
-            className="w-28 border-2 rounded-full border-black"
-          />
-        </LazyLoad>
-        <div className="ml-5">
+      <div className="text-center mt-8">
+        <p className="italic">
+          "And one of His signs is that He created mates for you from yourselves
+          that you may find rest in them, and He put between you love and
+          compassion, most surely there are signs in this for a people who
+          reflect."
+        </p>
+        <p className="font-medium">(Ar-Rum: 21)</p>
+      </div>
+
+      <Row align="middle" gutter={16} className="mt-12">
+        <Col span={8}>
+          <LazyLoad height={200}>
+            <img
+              alt="Medina Aulia"
+              src="https://i.ibb.co/C5NKCqY/bride.png"
+              className="border-2 rounded-full border-black cursor-pointer"
+              onClick={() =>
+                handleOpenModalImage("https://i.ibb.co/C5NKCqY/bride.png")
+              }
+            />
+          </LazyLoad>
+        </Col>
+        <Col span={16}>
           <p className="text-lg font-medium">MEDINA AULIA</p>
           <a
             href="https://www.instagram.com/medinaauliaa"
@@ -30,32 +60,45 @@ const Profile = () => {
           </a>
           <p>Daughter of</p>
           <p>Mr. A. Alamsyah Bariji and Mrs. Sri Wahyuni</p>
-        </div>
-      </div>
+        </Col>
+      </Row>
 
-      <div className="pt-5 flex justify-center items-center mt-3">
-        <div className="text-right mr-5">
+      <Row align="middle" gutter={16} className="mt-12">
+        <Col span={8}>
+          <LazyLoad height={200}>
+            <img
+              alt="Ryan Rafilianto"
+              src="https://i.ibb.co/3h1Nf8M/groom.png"
+              className="border-2 rounded-full border-black cursor-pointer"
+              onClick={() =>
+                handleOpenModalImage("https://i.ibb.co/3h1Nf8M/groom.png")
+              }
+            />
+          </LazyLoad>
+        </Col>
+        <Col span={16}>
           <p className="text-lg font-medium">RYAN RAFILIANTO</p>
           <a
             href="https://www.instagram.com/rrafilianto"
             target="_blank"
             rel="noreferrer"
-            className="flex justify-end items-center mb-3"
+            className="flex items-center mb-3"
           >
             <Instagram />
             <p className="ml-1">@rrafilianto</p>
           </a>
           <p>Son of</p>
           <p>Mr. Mukiran and Mrs. Sutati</p>
-        </div>
-        <LazyLoad height={200}>
-          <img
-            alt="Ryan Rafilianto"
-            src="https://i.ibb.co/3h1Nf8M/groom.png"
-            className="w-28 border-2 rounded-full border-black"
-          />
-        </LazyLoad>
-      </div>
+        </Col>
+      </Row>
+
+      <ModalGateway>
+        {modalIsOpen && (
+          <Modal onClose={handleCloseModalImage}>
+            <Carousel views={image} />
+          </Modal>
+        )}
+      </ModalGateway>
     </div>
   );
 };
