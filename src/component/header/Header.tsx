@@ -63,12 +63,12 @@ const Header = () => {
             <div className="border-b border-gray-200 mt-2 mx-8" />
           </div>
           <button
-            className="rounded button-white mt-28 px-6 py-2"
+            className="button-white mt-28 px-6 py-2"
             onClick={handleSaveTheDate}
           >
             <div className="flex items-center text-gray-800">
               <CalendarEvent className="mr-2" />
-              <p>Save Date to Google Calendar</p>
+              <p>Save Date to Calendar</p>
             </div>
           </button>
         </div>

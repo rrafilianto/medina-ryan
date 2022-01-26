@@ -60,9 +60,9 @@ const HomePage = () => {
 
         <Photo />
 
-        <Envelope />
-
         <Forum />
+
+        <Envelope />
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
   return (
     <div
       id="invitation-modal"
-      className="invitation page-width z-10 text-gray-100"
+      className="invitation page-width z-20 text-gray-100"
     >
       <div className="modal-background-image">
         <div className="flex justify-center items-center text-center h-screen">
@@ -48,7 +48,7 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
             <p className="text-3xl font-semibold capitalize">{name}</p>
             <p className="mt-6">Invite you to celebrate at our wedding</p>
             <button
-              className="rounded button-white mt-24 px-24 py-3"
+              className="button-white mt-24 px-24 py-3"
               onClick={handleClose}
             >
               <div className="flex items-center text-gray-800">

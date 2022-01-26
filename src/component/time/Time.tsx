@@ -12,7 +12,7 @@ const Time = () => {
         <p className="text-lg font-medium">AKAD NIKAH</p>
         <div className="flex justify-center items-center mt-3">
           <CalendarEvent className="mr-2" />
-          <p>Sunday, February 06, 2021</p>
+          <p>Sunday, February 06, 2022</p>
         </div>
         <div className="flex justify-center items-center mt-1">
           <Clock className="mr-2" />
@@ -24,7 +24,7 @@ const Time = () => {
         <p className="text-lg font-medium">WEDDING CEREMONY</p>
         <div className="flex justify-center items-center mt-3">
           <CalendarEvent className="mr-2" />
-          <p>Sunday, February 06, 2021</p>
+          <p>Sunday, February 06, 2022</p>
         </div>
         <div className="flex justify-center items-center mt-1">
           <Clock className="mr-2" />
