@@ -32,6 +32,7 @@ const Forum = () => {
 
   useEffect(() => {
     fetchWishes();
+    // eslint-disable-next-line
   }, []);
 
   const fetchWishes = async () => {
