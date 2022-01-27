@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Envelope, MusicNote } from "react-bootstrap-icons";
+import { Envelope } from "react-bootstrap-icons";
 import queryString from "query-string";
 
 import "./_InvitationModal.css";
@@ -56,10 +56,6 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
                 <p>Open Invitation</p>
               </div>
             </button>
-            <div className="flex justify-center items-center mt-10">
-              <MusicNote className="mr-2" />
-              <p>Aiana Grande & Justin Bieber - Stuck with U</p>
-            </div>
           </div>
         </div>
       </div>

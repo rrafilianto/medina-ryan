@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import { Divider } from "antd";
 
 import { image } from "./Image";
 import LazyLoad from "react-lazyload";
@@ -21,9 +22,7 @@ const Photo = () => {
 
   return (
     <div className="px-8 py-14 text-center">
-      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
-        OUR PHOTO
-      </p>
+      <Divider>OUR PHOTO</Divider>
 
       <LazyLoad height={200}>
         <div className="mt-12">

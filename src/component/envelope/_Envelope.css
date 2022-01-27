@@ -1,0 +1,7 @@
+.background-envelope {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("https://i.ibb.co/9gStdMc/DSC02505.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

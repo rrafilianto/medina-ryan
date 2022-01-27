@@ -5,6 +5,17 @@
   background-color: #e4e2e2;
 }
 
+@font-face {
+  font-family: "Chubgothic";
+  src: local("Chubgothic"), url(./font/chubgothic.ttf) format("opentype");
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+  font-size: 1.5rem;
+  border-top-color: rgb(31, 41, 55, 0.3);
+  font-family: "Chubgothic";
+}
+
 .color-black {
   color: rgba(31, 41, 55);
   /* color: rgb(25, 25, 25); */

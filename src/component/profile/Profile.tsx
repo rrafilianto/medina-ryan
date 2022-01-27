@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Row } from "antd";
+import { Col, Divider, Row } from "antd";
 import LazyLoad from "react-lazyload";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { Instagram } from "react-bootstrap-icons";
@@ -20,9 +20,7 @@ const Profile = () => {
 
   return (
     <div className="px-8 py-14">
-      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
-        WE'RE GETTING MARRIED
-      </p>
+      <Divider>WE'RE GETTING MARRIED</Divider>
 
       <div className="text-center mt-8">
         <p className="italic">
@@ -40,7 +38,7 @@ const Profile = () => {
             <img
               alt="Medina Aulia"
               src="https://i.ibb.co/C5NKCqY/bride.png"
-              className="border-2 rounded-full border-black cursor-pointer"
+              className="cursor-pointer"
               onClick={() =>
                 handleOpenModalImage("https://i.ibb.co/C5NKCqY/bride.png")
               }
@@ -48,7 +46,7 @@ const Profile = () => {
           </LazyLoad>
         </Col>
         <Col span={16}>
-          <p className="text-lg font-medium">MEDINA AULIA</p>
+          <p className="text-lg font-medium font-primary">MEDINA AULIA</p>
           <a
             href="https://www.instagram.com/medinaauliaa"
             target="_blank"
@@ -69,7 +67,7 @@ const Profile = () => {
             <img
               alt="Ryan Rafilianto"
               src="https://i.ibb.co/3h1Nf8M/groom.png"
-              className="border-2 rounded-full border-black cursor-pointer"
+              className="cursor-pointer"
               onClick={() =>
                 handleOpenModalImage("https://i.ibb.co/3h1Nf8M/groom.png")
               }
@@ -77,7 +75,7 @@ const Profile = () => {
           </LazyLoad>
         </Col>
         <Col span={16}>
-          <p className="text-lg font-medium">RYAN RAFILIANTO</p>
+          <p className="text-lg font-medium font-primary">RYAN RAFILIANTO</p>
           <a
             href="https://www.instagram.com/rrafilianto"
             target="_blank"

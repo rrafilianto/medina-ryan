@@ -1,5 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
+import { Divider } from "antd";
 import { Map, PinMap } from "react-bootstrap-icons";
 
 const Location = () => {
@@ -11,12 +12,10 @@ const Location = () => {
 
   return (
     <div className="px-8 py-14 text-center">
-      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
-        WEDDING VENUE
-      </p>
+      <Divider>WEDDING VENUE</Divider>
 
       <div className="mt-12">
-        <div className="text-xl flex justify-center items-center mb-3">
+        <div className="text-lg flex justify-center items-center mb-3">
           <PinMap className="mr-2" />
           <p>Kopi Pontis & Halaman</p>
         </div>

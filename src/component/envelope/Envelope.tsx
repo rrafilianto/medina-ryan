@@ -14,6 +14,7 @@ import LazyLoad from "react-lazyload";
 import { v4 as uuidv4 } from "uuid";
 
 import firebase from "../../utils/firebase";
+import "./_Envelope.css";
 
 const layout = {
   labelCol: { span: 6 },
@@ -70,7 +71,7 @@ const Envelope = () => {
   };
 
   return (
-    <div className="px-8 py-14 background-black text-gray-100">
+    <div className="px-8 py-14 background-envelope text-gray-100">
       <p className="text-center">
         Your presence and prayer for our wedding is the greatest gift we could
         ask for. No other gifts are needed or expected. Nevertheless, we would
@@ -93,78 +94,80 @@ const Envelope = () => {
         footer={null}
         visible={isModalVisible}
         onCancel={() => setIsModalVisible(false)}
-        style={{ top: 0 }}
+        style={{ top: "19%" }}
       >
-        <div className="mt-6">
-          <div className="flex justify-center">
-            <LazyLoad height={200}>
-              <img
-                alt="Dana"
-                src="https://i.ibb.co/LhWqXkx/dana.png"
-                className="w-28"
-              />
-            </LazyLoad>
-          </div>
-
-          <div className="flex justify-center mt-3">
-            <div className="text-right mr-3">
-              <p>Account Number :</p>
-              <p>Account Name :</p>
+        <div className="my-12">
+          <div>
+            <div className="flex justify-center">
+              <LazyLoad height={200}>
+                <img
+                  alt="Dana"
+                  src="https://i.ibb.co/LhWqXkx/dana.png"
+                  className="w-28"
+                />
+              </LazyLoad>
             </div>
-            <div>
-              <p>081322211403</p>
-              <p>Dina Aulia</p>
-            </div>
-          </div>
 
-          <div className="text-center mt-3">
-            <button
-              className="button-black px-4 py-2"
-              onClick={() => handleCopyClipboard("dana")}
-            >
-              <div className="flex items-center text-gray-100 text-xs">
-                <Clipboard className="mr-2" /> Copy Account Number
+            <div className="flex justify-center mt-3">
+              <div className="text-right mr-3">
+                <p>Account Number :</p>
+                <p>Account Name :</p>
               </div>
-            </button>
+              <div>
+                <p>081322211403</p>
+                <p>Dina Aulia</p>
+              </div>
+            </div>
+
+            <div className="text-center mt-3">
+              <button
+                className="button-black px-4 py-2"
+                onClick={() => handleCopyClipboard("dana")}
+              >
+                <div className="flex items-center text-gray-100 text-xs">
+                  <Clipboard className="mr-2" /> Copy Account Number
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <div className="flex justify-center">
+              <LazyLoad height={200}>
+                <img
+                  alt="BCA"
+                  src="https://i.ibb.co/cvjJYyk/bca.png"
+                  className="w-28"
+                />
+              </LazyLoad>
+            </div>
+
+            <div className="flex justify-center mt-3">
+              <div className="text-right mr-3">
+                <p>Account Number :</p>
+                <p>Account Name :</p>
+              </div>
+              <div>
+                <p>4360103540</p>
+                <p>Ryan Rafilianto</p>
+              </div>
+            </div>
+
+            <div className="text-center mt-3">
+              <button
+                className="button-black px-4 py-2"
+                onClick={() => handleCopyClipboard("bca")}
+              >
+                <div className="flex items-center text-gray-100 text-xs">
+                  <Clipboard className="mr-2" /> Copy Account Number
+                </div>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="mt-10">
-          <div className="flex justify-center">
-            <LazyLoad height={200}>
-              <img
-                alt="BCA"
-                src="https://i.ibb.co/cvjJYyk/bca.png"
-                className="w-28"
-              />
-            </LazyLoad>
-          </div>
-
-          <div className="flex justify-center mt-3">
-            <div className="text-right mr-3">
-              <p>Account Number :</p>
-              <p>Account Name :</p>
-            </div>
-            <div>
-              <p>4360103540</p>
-              <p>Ryan Rafilianto</p>
-            </div>
-          </div>
-
-          <div className="text-center mt-3">
-            <button
-              className="button-black px-4 py-2"
-              onClick={() => handleCopyClipboard("bca")}
-            >
-              <div className="flex items-center text-gray-100 text-xs">
-                <Clipboard className="mr-2" /> Copy Account Number
-              </div>
-            </button>
-          </div>
-        </div>
-
-        <div className="border border-gray-300 mt-14 p-5 bg-white bg-opacity-75">
-          <p className="text-center text-base mb-3">Transfer Confirmation</p>
+        {/* <div className="border border-gray-300 mt-14 p-5 bg-white bg-opacity-75">
+          <p className="text-center mb-3">Transfer Confirmation</p>
           <Form {...layout} form={form} onFinish={handleConfirmation}>
             <Form.Item
               name="name"
@@ -217,7 +220,7 @@ const Envelope = () => {
               </Button>
             </Form.Item>
           </Form>
-        </div>
+        </div> */}
       </Modal>
     </div>
   );

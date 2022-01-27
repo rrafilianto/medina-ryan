@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   Button,
   Col,
+  Divider,
   Empty,
   Form,
   Input,
@@ -67,7 +68,7 @@ const Forum = () => {
       .doc(id)
       .set(data)
       .then(() => {
-        message.success("Success send wishes");
+        message.success("Thank you for your wishes");
         setIsLoadingButton(false);
       })
       .catch(() => {
@@ -103,9 +104,7 @@ const Forum = () => {
 
   return (
     <div className="px-8 py-14">
-      <p className="border-b border-t border-black py-4 text-2xl font-medium text-center">
-        WEDDING WISHES
-      </p>
+      <Divider>WEDDING WISHES</Divider>
 
       <Spin spinning={isLoadingChat}>
         <div className="border-gray-300 border bg-white bg-opacity-90 mt-14">
@@ -154,7 +153,7 @@ const Forum = () => {
       </Spin>
 
       <div className="border-gray-300 border p-5 bg-white bg-opacity-90 mt-5">
-        <p className="text-center text-base mb-5">Leave your wishes for us</p>
+        <p className="text-center mb-5">Leave your wishes for us</p>
         <Form {...layout} form={form} onFinish={handleSubmit}>
           <Form.Item
             name="name"

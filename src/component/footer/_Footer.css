@@ -1,12 +1,7 @@
-.background-image {
+.background-footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url("https://i.ibb.co/vxNDMJT/HLJ03456.jpg");
+    url("https://i.ibb.co/9gStdMc/DSC02505.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-}
-
-.text-mini {
-  font-size: 0.65rem;
 }
