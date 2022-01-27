@@ -1,5 +1,11 @@
 import React from "react";
 import { Col, Divider, Row } from "antd";
+import LazyLoad from "react-lazyload";
+
+import distance from "../../images/distance.svg";
+import mask from "../../images/mask.svg";
+import temperature from "../../images/temperature.svg";
+import wash from "../../images/wash.svg";
 
 const Protocol = () => {
   return (
@@ -12,19 +18,62 @@ const Protocol = () => {
       </p>
 
       <div className="mt-10 text-center">
-        <Row gutter={[16, 32]}>
-          <Col className="gutter-row" span={12}>
+        <Row gutter={[16, 8]}>
+          <Col span={12}>
+            <LazyLoad height={200}>
+              <img
+                alt="Mask"
+                src={mask}
+                className="max-h-10"
+                style={{ margin: "auto" }}
+              />
+            </LazyLoad>
+          </Col>
+          <Col span={12}>
+            <LazyLoad height={200}>
+              <img
+                alt="Wash"
+                src={wash}
+                className="max-h-10"
+                style={{ margin: "auto" }}
+              />
+            </LazyLoad>
+          </Col>
+          <Col span={12}>
             <p>
               Wear a mask when you come the event/when the event takes place
             </p>
           </Col>
-          <Col className="gutter-row" span={12}>
+          <Col span={12}>
             <p>Wash hands before entering event</p>
           </Col>
-          <Col className="gutter-row" span={12}>
+        </Row>
+
+        <Row className="mt-8" gutter={[16, 8]}>
+          <Col span={12}>
+            <LazyLoad height={200}>
+              <img
+                alt="Temperature"
+                src={temperature}
+                className="max-h-10"
+                style={{ margin: "auto" }}
+              />
+            </LazyLoad>
+          </Col>
+          <Col span={12}>
+            <LazyLoad height={200}>
+              <img
+                alt="Distance"
+                src={distance}
+                className="max-h-10"
+                style={{ margin: "auto" }}
+              />
+            </LazyLoad>
+          </Col>
+          <Col span={12}>
             <p>Check body temperature first before entering the event</p>
           </Col>
-          <Col className="gutter-row" span={12}>
+          <Col span={12}>
             <p>
               Keep the distance between friends and fellow invited min. 1-2
               meters

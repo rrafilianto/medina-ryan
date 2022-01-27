@@ -19,7 +19,7 @@ const Footer = () => {
             style={{ margin: "auto" }}
           />
         </LazyLoad>
-        <p className="mt-3 text-mini">Medina & Ryan Weeding</p>
+        <p className="mt-3 text-mini">Medina & Ryan Wedding</p>
       </div>
     </div>
   );
