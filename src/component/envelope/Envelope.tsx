@@ -1,33 +1,12 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Checkbox,
-  Form,
-  Input,
-  message,
-  Modal,
-  Select,
-  Spin,
-} from "antd";
-import { Clipboard, CheckLg } from "react-bootstrap-icons";
+import { message, Modal } from "antd";
+import { Clipboard } from "react-bootstrap-icons";
 import LazyLoad from "react-lazyload";
-import { v4 as uuidv4 } from "uuid";
 
-import firebase from "../../utils/firebase";
 import "./_Envelope.css";
 
-const layout = {
-  labelCol: { span: 6 },
-  wrapperCol: { span: 18 },
-};
-
 const Envelope = () => {
-  const dbEnvelope = firebase.collection("envelope");
-  const [form] = Form.useForm();
-
-  const [isAnon, setIsAnon] = useState<boolean>(false);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleCopyClipboard = (type: string) => {
     type === "dana"
@@ -35,39 +14,6 @@ const Envelope = () => {
       : navigator.clipboard.writeText("4360103540");
 
     message.success("Account Number is copied");
-  };
-
-  const handleConfirmation = async (dataForm: any) => {
-    setIsLoading(true);
-
-    const id = uuidv4();
-    const data = {
-      ...dataForm,
-      id,
-      isAnon,
-    };
-
-    await dbEnvelope
-      .doc(id)
-      .set(data)
-      .then(() => {
-        message.success("Thank you");
-        setIsLoading(false);
-        setIsModalVisible(false);
-      })
-      .catch(() => {
-        message.error("Error server, please contact admin");
-        setIsLoading(false);
-        setIsModalVisible(false);
-      })
-      .finally(() => {
-        form.resetFields();
-        setIsAnon(false);
-      });
-  };
-
-  const onChangeAnonymous = (e: any) => {
-    setIsAnon(e.target.checked);
   };
 
   return (
@@ -165,62 +111,6 @@ const Envelope = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="border border-gray-300 mt-14 p-5 bg-white bg-opacity-75">
-          <p className="text-center mb-3">Transfer Confirmation</p>
-          <Form {...layout} form={form} onFinish={handleConfirmation}>
-            <Form.Item
-              name="name"
-              label="Name"
-              rules={
-                !isAnon ? [{ required: true, message: "Name is required" }] : []
-              }
-              className="mb-3"
-            >
-              <Input placeholder="Input Name" disabled={isAnon} />
-            </Form.Item>
-            <Checkbox
-              className="text-xs"
-              checked={isAnon}
-              onChange={onChangeAnonymous}
-            >
-              <p className="text-xs">Show as Anonymous</p>
-            </Checkbox>
-            <Form.Item
-              name="amount"
-              label="Amount"
-              rules={[{ required: true, message: "Amount is required" }]}
-              className="mb-3"
-            >
-              <Input type="number" placeholder="Input Amount" />
-            </Form.Item>
-            <Form.Item
-              name="bankName"
-              label="Bank Name"
-              rules={[{ required: true, message: "Bank Name is required" }]}
-            >
-              <Select placeholder="Select Bank Name">
-                <Select.Option value="DANA">DANA</Select.Option>
-                <Select.Option value="BCA">BCA</Select.Option>
-              </Select>
-            </Form.Item>
-            <Form.Item className="text-center">
-              <Button
-                htmlType="submit"
-                className="button-black px-4"
-                disabled={isLoading}
-              >
-                {isLoading ? (
-                  <Spin size="small" />
-                ) : (
-                  <div className="flex items-center text-gray-100">
-                    <CheckLg className="mr-2" /> Confirm
-                  </div>
-                )}
-              </Button>
-            </Form.Item>
-          </Form>
-        </div> */}
       </Modal>
     </div>
   );
