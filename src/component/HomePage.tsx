@@ -53,17 +53,15 @@ const HomePage = () => {
 
       <Header />
 
-      <div className="bg-fixed home-background-image">
-        <Profile />
+      <Profile />
 
-        <Time />
+      <Time />
 
-        <Location />
+      <Location />
 
-        <Photo />
+      <Photo />
 
-        <Forum />
-      </div>
+      <Forum />
 
       <Envelope />
 
