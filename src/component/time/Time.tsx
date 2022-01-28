@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Alarm, CalendarEvent, Clock } from "react-bootstrap-icons";
+import { CalendarEvent, Clock } from "react-bootstrap-icons";
 import { Divider } from "antd";
 import queryString from "query-string";
 
