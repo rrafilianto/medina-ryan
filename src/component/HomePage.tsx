@@ -12,7 +12,6 @@ import Forum from "./forum";
 import Protocol from "./protocol";
 import Footer from "./footer";
 
-import "./_HomePage.css";
 import music from "./../audio/stuck-with-u.mp3";
 
 const HomePage = () => {

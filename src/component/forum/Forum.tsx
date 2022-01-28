@@ -106,54 +106,10 @@ const Forum = () => {
     <div className="px-8 py-14">
       <Divider>WEDDING WISHES</Divider>
 
-      <Spin spinning={isLoadingChat}>
-        <div className="border-gray-300 border bg-white bg-opacity-90 mt-14">
-          <div
-            className="pt-2 overflow-y-scroll"
-            style={{ maxHeight: "45rem" }}
-          >
-            {wishesList.length > 0 ? (
-              wishesList.map(({ id, name, message, time, love, isLove }) => {
-                return (
-                  <div key={id} className="border-b">
-                    <Row className="mx-5 my-2">
-                      <Col span={6}>
-                        <div className="rounded-full circle bg-gray-300 text-lg font-medium text-center uppercase">
-                          {name.split(" ")[0]?.charAt(0)}
-                          {name.split(" ")[1]?.charAt(0)}
-                        </div>
-                      </Col>
-                      <Col span={18}>
-                        <p className="font-medium capitalize">{name}</p>
-                        <div className="flex items-center text-mini">
-                          <ClockHistory className="mr-1" /> {timeSince(time)}
-                        </div>
-                        <p className="mt-2">{message}</p>
-                        <button
-                          className="flex items-center text-mini mt-2 button"
-                          onClick={() => handleLove(id)}
-                        >
-                          {isLove ? (
-                            <HeartFill className="mr-1 color-red" />
-                          ) : (
-                            <Heart className="mr-1" />
-                          )}{" "}
-                          {love || 0}
-                        </button>
-                      </Col>
-                    </Row>
-                  </div>
-                );
-              })
-            ) : (
-              <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
-            )}
-          </div>
-        </div>
-      </Spin>
-
-      <div className="border-gray-300 border p-5 bg-white bg-opacity-90 mt-5">
-        <p className="text-center mb-5">Leave your wishes for us</p>
+      <p className="text-center text-base mb-3 mt-12 font-semibold">
+        Leave your wishes for us
+      </p>
+      <div className="border-gray-300 border p-5 bg-white bg-opacity-90">
         <Form {...layout} form={form} onFinish={handleSubmit}>
           <Form.Item
             name="name"
@@ -184,7 +140,7 @@ const Forum = () => {
           <Form.Item className="text-center">
             <Button
               htmlType="submit"
-              className="button-black text-gray-100 px-5"
+              className="button-black text-gray-100 text-xs px-5"
               disabled={isLoadingButton}
             >
               <div className="text-gray-100">
@@ -194,6 +150,52 @@ const Forum = () => {
           </Form.Item>
         </Form>
       </div>
+
+      <Spin spinning={isLoadingChat}>
+        <div className="border-gray-300 border bg-white bg-opacity-90 mt-3">
+          <div
+            className="pt-2 overflow-y-scroll"
+            style={{ maxHeight: "45rem" }}
+          >
+            {wishesList.length > 0 ? (
+              wishesList.map(({ id, name, message, time, love, isLove }) => {
+                return (
+                  <div key={id} className="border-b">
+                    <Row className="mx-5 my-2">
+                      <Col span={6}>
+                        <div className="rounded-full circle bg-gray-300 text-base font-semibold text-center uppercase">
+                          {name.split(" ")[0]?.charAt(0)}
+                          {name.split(" ")[1]?.charAt(0)}
+                        </div>
+                      </Col>
+                      <Col span={18}>
+                        <p className="font-semibold capitalize">{name}</p>
+                        <div className="flex items-center text-mini">
+                          <ClockHistory className="mr-1" /> {timeSince(time)}
+                        </div>
+                        <p className="mt-2">{message}</p>
+                        <button
+                          className="flex items-center text-mini mt-2 button"
+                          onClick={() => handleLove(id)}
+                        >
+                          {isLove ? (
+                            <HeartFill className="mr-1 color-red" />
+                          ) : (
+                            <Heart className="mr-1" />
+                          )}{" "}
+                          {love || 0}
+                        </button>
+                      </Col>
+                    </Row>
+                  </div>
+                );
+              })
+            ) : (
+              <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
+            )}
+          </div>
+        </div>
+      </Spin>
     </div>
   );
 };

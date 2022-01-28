@@ -12,9 +12,9 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
   const [name, setName] = useState<string>();
 
   useEffect(() => {
-    const inviteName = queryString.parse(window.location.search);
-    if (inviteName?.to) {
-      const str = inviteName.to.toString();
+    const query = queryString.parse(window.location.search);
+    if (query?.to) {
+      const str = query.to.toString();
 
       const replace = str.replaceAll(" ", " & ");
       const newInviteName = replace.replaceAll("-", " ");
@@ -42,10 +42,10 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
     >
       <div className="modal-background-image">
         <div className="flex justify-center items-center text-center h-screen">
-          <div>
-            <p className="text-3xl font-semibold mb-20">MEDINA & RYAN</p>
+          <div className="mx-10">
+            <p className="text-3xl mb-20 font-primary">MEDINA & RYAN</p>
             <p className="mb-6">to Mr/Mrs/Brother/Sister</p>
-            <p className="text-3xl font-semibold capitalize">{name}</p>
+            <p className="text-2xl capitalize font-semibold">{name}</p>
             <p className="mt-6">Invite you to celebrate at our wedding</p>
             <button
               className="button-white mt-24 px-24 py-3"

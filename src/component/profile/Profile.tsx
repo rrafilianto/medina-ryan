@@ -46,7 +46,9 @@ const Profile = () => {
           </LazyLoad>
         </Col>
         <Col span={16}>
-          <p className="text-lg font-medium font-primary">MEDINA AULIA</p>
+          <p className="text-lg font-medium font-primary font-semibold">
+            MEDINA AULIA
+          </p>
           <a
             href="https://www.instagram.com/medinaauliaa"
             target="_blank"
@@ -75,7 +77,9 @@ const Profile = () => {
           </LazyLoad>
         </Col>
         <Col span={16}>
-          <p className="text-lg font-medium font-primary">RYAN RAFILIANTO</p>
+          <p className="text-lg font-medium font-primary font-semibold">
+            RYAN RAFILIANTO
+          </p>
           <a
             href="https://www.instagram.com/rrafilianto"
             target="_blank"

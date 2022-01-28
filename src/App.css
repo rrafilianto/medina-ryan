@@ -25,15 +25,15 @@
   background-position: center;
 }
 
-@font-face {
-  font-family: "Chubgothic";
-  src: local("Chubgothic"), url(./font/chubgothic.ttf) format("opentype");
+.font-primary {
+  font-family: "Cormorant Garamond", serif;
 }
 
 .ant-divider-horizontal.ant-divider-with-text {
   font-size: 1.5rem;
   border-top-color: rgb(31, 41, 55, 0.3);
-  font-family: "Chubgothic";
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
 }
 
 .color-black {

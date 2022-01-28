@@ -15,7 +15,7 @@ const Location = () => {
       <Divider>WEDDING VENUE</Divider>
 
       <div className="mt-12">
-        <div className="text-lg flex justify-center items-center mb-3">
+        <div className="text-base font-bold flex justify-center items-center mb-3">
           <PinMap className="mr-2" />
           <p>Kopi Pontis & Halaman</p>
         </div>
@@ -38,7 +38,10 @@ const Location = () => {
         </div>
       </LazyLoad>
 
-      <button className="button-black px-6 py-2" onClick={handleOpenMap}>
+      <button
+        className="button-black text-xs px-6 py-2"
+        onClick={handleOpenMap}
+      >
         <div className="flex items-center text-gray-100">
           <Map className="mr-2" />
           <p>Open Map</p>
