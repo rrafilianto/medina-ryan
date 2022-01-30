@@ -48,7 +48,7 @@ const InvitationModal = ({ handlePlay }: InvitationModalProps) => {
             <p className="text-2xl capitalize font-semibold">{name}</p>
             <p className="mt-6">Invite you to celebrate at our wedding</p>
             <button
-              className="button-white mt-24 px-24 py-3"
+              className="button-white mt-24 px-20 py-3"
               onClick={handleClose}
             >
               <div className="flex items-center text-gray-800">
